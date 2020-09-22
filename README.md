@@ -1,9 +1,8 @@
-# Sort/Hvid
+![sorthvid](./resources/sort-hvid-banner.png)
+![sorthvid](./resources/sort-hvid.png)
 
 Sort/Hvid is a Vim theme with barely any colors.
 It is heavily inspired by [Yin/Yang](https://github.com/pgdouyon/vim-yin-yang/) and [Meh](https://github.com/davidosomething/vim-colors-meh).
-
-![sorthvid](./resources/sort-hvid.png)
 
 ## Installation
 
