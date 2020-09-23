@@ -1,4 +1,5 @@
-" sort/hvid - black/white color scheme
+" Sort/Hvid
+" Based of the brilliant Ying/Yan by pgdouyon.
 
 if (&background ==# "dark" && get(g:, "colors_name", "") ==# "hvid")
     runtime! colors/sort.vim
@@ -100,25 +101,19 @@ call s:hi('Normal', s:palette.gray05, s:palette.white, '')
 set background=light
 
 call s:hi('Constant', s:palette.gray11, [], 'bold')
-call s:hi('String', s:palette.lightblue, [], '')
-call s:hi('Number', s:palette.numbers, [], '')
-
-call s:hi('Identifier', s:palette.gray06, [], 'none')
 call s:hi('Function', s:palette.gray06, [], '')
-
-call s:hi('Statement', s:palette.gray08, [], 'bold')
-call s:hi('Operator', s:palette.gray03, [], 'none')
+call s:hi('Identifier', s:palette.gray06, [], 'none')
 call s:hi('Keyword', s:palette.gray10, [], '')
-
+call s:hi('Number', s:palette.numbers, [], '')
+call s:hi('Operator', s:palette.gray03, [], 'none')
 call s:hi('PreProc', s:palette.gray10, [], 'none')
-
-call s:hi('Type', s:palette.gray09, [], 'bold')
-
 call s:hi('Special', s:palette.gray10, [], '')
 call s:hi('SpecialComment', s:palette.gray12, [], '')
-
+call s:hi('Statement', s:palette.gray08, [], 'bold')
+call s:hi('String', s:palette.lightblue, [], '')
 call s:hi('Title', s:palette.gray10, [], 'bold')
 call s:hi('Todo', s:palette.brown, s:palette.white, '')
+call s:hi('Type', s:palette.gray09, [], 'bold')
 if has("nvim") || has("gui_running")
     call s:hi('Comment', s:palette.gray12, [], 'italic')
 else
@@ -131,86 +126,69 @@ call s:hi('CursorLine', [], s:palette.gray15, 'none')
 call s:hi('CursorLineNr', s:palette.gray06, s:palette.gray15, 'none')
 
 call s:hi('Visual', s:palette.white, s:palette.gray06, '')
-call s:hi('Search', s:palette.gray15, s:palette.gray03, 'none')
-call s:hi('IncSearch', s:palette.white, s:palette.gray11, 'bold')
-
-call s:hi('SpellBad', s:palette.red, s:palette.white, 'undercurl')
-call s:hi('SpellCap', s:palette.red, s:palette.white, 'undercurl')
-call s:hi('SpellLocal', s:palette.red, s:palette.white, 'undercurl')
-call s:hi('SpellRare', s:palette.brown, s:palette.white, 'undercurl')
-
-call s:hi('Error', s:palette.red, s:palette.white, 'bold')
-call s:hi('ErrorMsg', s:palette.red, s:palette.white, '')
-call s:hi('WarningMsg', s:palette.brown, s:palette.white, '')
-call s:hi('ModeMsg', s:palette.gray10, [], '')
-call s:hi('MoreMsg', s:palette.gray10, [], '')
-
-call s:hi('MatchParen', s:palette.red, s:palette.white, '')
 
 call s:hi('Cursor', [], s:palette.gray12, '')
-call s:hi('Underlined', s:palette.gray08, [], 'underline')
-call s:hi('SpecialKey', s:palette.gray13, [], '')
-call s:hi('NonText', s:palette.gray13, [], '')
+call s:hi('DiffAdd', s:palette.white, s:palette.green, '')
+call s:hi('DiffAdded', s:palette.green, s:palette.white, '')
+call s:hi('DiffChange', s:palette.white, s:palette.blue, '')
+call s:hi('DiffChanged', s:palette.blue, s:palette.white, '')
+call s:hi('DiffDelete', s:palette.white, s:palette.red, '')
+call s:hi('DiffRemoved', s:palette.red, s:palette.white, '')
+call s:hi('DiffText', s:palette.white, s:palette.blue, '')
 call s:hi('Directory', s:palette.gray08, [], '')
-
+call s:hi('Error', s:palette.red, s:palette.white, 'bold')
+call s:hi('ErrorMsg', s:palette.red, s:palette.white, '')
+call s:hi('IncSearch', s:palette.white, s:palette.gray11, 'bold')
+call s:hi('MatchParen', s:palette.red, s:palette.white, '')
+call s:hi('ModeMsg', s:palette.gray10, [], '')
+call s:hi('MoreMsg', s:palette.gray10, [], '')
+call s:hi('NonText', s:palette.gray13, [], '')
 call s:hi('Pmenu', s:palette.gray05, s:palette.gray14, 'none')
 call s:hi('PmenuSbar', s:palette.white, s:palette.gray01, 'none')
 call s:hi('PmenuSel', s:palette.gray14, s:palette.gray05, '')
 call s:hi('PmenuThumb', s:palette.gray14, s:palette.gray03, 'none')
-
+call s:hi('Search', s:palette.gray15, s:palette.gray03, 'none')
+call s:hi('SpecialKey', s:palette.gray13, [], '')
+call s:hi('SpellBad', s:palette.red, s:palette.white, 'undercurl')
+call s:hi('SpellCap', s:palette.red, s:palette.white, 'undercurl')
+call s:hi('SpellLocal', s:palette.red, s:palette.white, 'undercurl')
+call s:hi('SpellRare', s:palette.brown, s:palette.white, 'undercurl')
 call s:hi('StatusLine', s:palette.gray03, s:palette.gray13, 'none')
 call s:hi('StatusLineNC', s:palette.gray13, s:palette.gray15, 'none')
-call s:hi('WildMenu', s:palette.gray08, [], '')
+call s:hi('Underlined', s:palette.gray08, [], 'underline')
 call s:hi('VertSplit', s:palette.gray13, s:palette.gray13, 'none')
+call s:hi('WarningMsg', s:palette.brown, s:palette.white, '')
+call s:hi('WildMenu', s:palette.gray08, [], '')
 
-call s:hi('DiffAdd', s:palette.white, s:palette.green, '')
-call s:hi('DiffChange', s:palette.white, s:palette.blue, '')
-call s:hi('DiffDelete', s:palette.white, s:palette.red, '')
-call s:hi('DiffText', s:palette.white, s:palette.blue, '')
-call s:hi('DiffAdded', s:palette.green, s:palette.white, '')
-call s:hi('DiffChanged', s:palette.blue, s:palette.white, '')
-call s:hi('DiffRemoved', s:palette.red, s:palette.white, '')
-
-
-highlight! link Character Constant
-highlight! link Float Number
 highlight! link Boolean Number
-
-highlight! link SignColumn FoldColumn
+highlight! link Character Constant
+highlight! link CocHintSign Comment
 highlight! link ColorColumn FoldColumn
-highlight! link CursorColumn CursorLine
-
-highlight! link Folded LineNr
 highlight! link Conceal Normal
-highlight! link ErrorMsg Error
-
 highlight! link Conditional Statement
-highlight! link Repeat Statement
-highlight! link Label Statement
-highlight! link Exception Statement
-
-highlight! link Include PreProc
+highlight! link CursorColumn CursorLine
+highlight! link Debug Special
 highlight! link Define PreProc
+highlight! link Delimiter Special
+highlight! link ErrorMsg Error
+highlight! link Exception Statement
+highlight! link Float Number
+highlight! link Folded LineNr
+highlight! link Include PreProc
+highlight! link Label Statement
 highlight! link Macro PreProc
 highlight! link PreCondit PreProc
-
+highlight! link Question Special
+highlight! link Repeat Statement
+highlight! link SignColumn FoldColumn
+highlight! link SpecialChar Special
 highlight! link StorageClass Type
 highlight! link Structure Type
-highlight! link Typedef Type
-
-highlight! link SpecialChar Special
-highlight! link Tag Special
-highlight! link Delimiter Special
-highlight! link Debug Special
-highlight! link Question Special
-
-highlight! link VisualNOS Visual
 highlight! link TabLine StatusLineNC
 highlight! link TabLineFill StatusLineNC
 highlight! link TabLineSel StatusLine
-
-" Rust
+highlight! link Tag Special
+highlight! link Typedef Type
+highlight! link VisualNOS Visual
 highlight! link rustDerive PreProc
-" Coc
-highlight! link CocHintSign Comment
 
