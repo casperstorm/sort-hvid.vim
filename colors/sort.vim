@@ -161,6 +161,7 @@ call s:hi('WildMenu', s:palette.gray08, [], '')
 
 highlight! link Boolean Number
 highlight! link Character Constant
+highlight! link CocErrorSign Error
 highlight! link CocHintSign Comment
 highlight! link ColorColumn FoldColumn
 highlight! link Conceal Normal
