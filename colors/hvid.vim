@@ -32,10 +32,8 @@ let s:palette.gray02 = [238, '#444444']
 let s:palette.gray01 = [235, '#262626']
 let s:palette.black = [233, '#121212']
 
-let s:palette.purple = [104, '#8787d7']
 let s:palette.brown = [138, '#dcaa66']
-let s:palette.blue = [68, '#5f87d7']
-let s:palette.lightblue = [153, '#89aabb']
+let s:palette.blue = [153, '#89aabb']
 let s:palette.green = [151, '#92C892']
 let s:palette.red = [210, '#ff8787']
 
@@ -110,9 +108,9 @@ call s:hi('PreProc', s:palette.gray10, [], 'none')
 call s:hi('Special', s:palette.gray10, [], '')
 call s:hi('SpecialComment', s:palette.gray12, [], '')
 call s:hi('Statement', s:palette.gray08, [], 'bold')
-call s:hi('String', s:palette.lightblue, [], '')
+call s:hi('String', s:palette.blue, [], '')
 call s:hi('Title', s:palette.gray10, [], 'bold')
-call s:hi('Todo', s:palette.brown, s:palette.white, '')
+call s:hi('Todo', s:palette.brown, s:palette.white, 'italic')
 call s:hi('Type', s:palette.gray09, [], 'bold')
 if has("nvim") || has("gui_running")
     call s:hi('Comment', s:palette.gray12, [], 'italic')
@@ -163,6 +161,7 @@ call s:hi('WildMenu', s:palette.gray08, [], '')
 highlight! link Boolean Number
 highlight! link Character Constant
 highlight! link CocErrorSign Error
+highlight! link CocHintSign WarningMsg
 highlight! link CocHintSign Comment
 highlight! link ColorColumn FoldColumn
 highlight! link Conceal Normal

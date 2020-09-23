@@ -33,10 +33,8 @@ let s:palette.gray14 = [251, '#c6c6c6']
 let s:palette.gray15 = [254, '#e4e4e4']
 let s:palette.white  = [255, '#eeeeee']
 
-let s:palette.purple = [104, '#8787d7']
 let s:palette.brown = [138, '#dcaa66']
-let s:palette.blue = [68, '#5f87d7']
-let s:palette.lightblue = [153, '#89aabb']
+let s:palette.blue = [153, '#89aabb']
 let s:palette.green = [151, '#92C892']
 let s:palette.red = [210, '#ff8787']
 
@@ -110,9 +108,9 @@ call s:hi('PreProc', s:palette.gray07, [], 'none')
 call s:hi('Special', s:palette.gray05, [], '')
 call s:hi('SpecialComment', s:palette.comments, [], 'italic')
 call s:hi('Statement', s:palette.gray05, [], 'bold')
-call s:hi('String', s:palette.lightblue, [], '')
+call s:hi('String', s:palette.blue, [], '')
 call s:hi('Title', s:palette.gray07, [], 'bold')
-call s:hi('Todo', s:palette.brown, s:palette.black, '')
+call s:hi('Todo', s:palette.brown, s:palette.black, 'italic')
 call s:hi('Type', s:palette.gray05, [], 'bold')
 
 if has("nvim") || has("gui_running")
@@ -130,7 +128,7 @@ call s:hi('DiffChange', s:palette.blackest, s:palette.blue, '')
 call s:hi('DiffChanged', s:palette.blue, s:palette.black, '')
 call s:hi('DiffDelete', s:palette.blackest, s:palette.red, '')
 call s:hi('DiffRemoved', s:palette.red, s:palette.black, '')
-call s:hi('DiffText', s:palette.black, s:palette.lightblue, '')
+call s:hi('DiffText', s:palette.black, s:palette.blue, '')
 call s:hi('Directory', s:palette.gray08, [], '')
 call s:hi('Error', s:palette.red, s:palette.black, 'bold')
 call s:hi('ErrorMsg', s:palette.red, s:palette.black, '')
@@ -162,7 +160,8 @@ call s:hi('WildMenu', s:palette.gray08, [], '')
 highlight! link Boolean Number
 highlight! link Character Constant
 highlight! link CocErrorSign Error
-highlight! link CocHintSign Comment
+highlight! link CocHintSign WarningMsg
+highlight! link CocSelectedText Error
 highlight! link ColorColumn FoldColumn
 highlight! link Conceal Normal
 highlight! link Conditional Statement
