@@ -134,7 +134,7 @@ call s:hi('Error', s:palette.red, s:palette.black, 'bold')
 call s:hi('ErrorMsg', s:palette.red, s:palette.black, '')
 call s:hi('FoldColumn', s:palette.black, s:palette.black, 'none')
 call s:hi('IncSearch', s:palette.black, s:palette.gray07, 'bold')
-call s:hi('LineNr', s:palette.gray04, s:palette.gray01, 'none')
+call s:hi('LineNr', s:palette.gray04, s:palette.black, 'none')
 call s:hi('MatchParen', s:palette.red, s:palette.black, '')
 call s:hi('ModeMsg', s:palette.gray10, [], '')
 call s:hi('MoreMsg', s:palette.gray10, [], '')
@@ -190,3 +190,4 @@ highlight! link Tag Special
 highlight! link Typedef Type
 highlight! link VisualNOS Visual
 highlight! link rustDerive PreProc
+highlight! link NvimInternalError Error

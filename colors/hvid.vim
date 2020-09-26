@@ -118,7 +118,7 @@ else
     call s:hi('Comment', s:palette.gray12, [], '')
 endif
 
-call s:hi('LineNr', s:palette.gray13, s:palette.gray15, 'none')
+call s:hi('LineNr', s:palette.gray13, s:palette.white, 'none')
 call s:hi('FoldColumn', s:palette.gray08, s:palette.gray15, 'none')
 call s:hi('CursorLine', [], s:palette.gray15, 'none')
 call s:hi('CursorLineNr', s:palette.gray06, s:palette.gray15, 'none')
@@ -191,4 +191,4 @@ highlight! link Tag Special
 highlight! link Typedef Type
 highlight! link VisualNOS Visual
 highlight! link rustDerive PreProc
-
+highlight! link NvimInternalError Error
